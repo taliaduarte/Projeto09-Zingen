@@ -1,0 +1,87 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font: inherit;
+
+    -webkit-font-smoothing: antialiased; /*fonte ficar mais suave nos navegadores*/
+    -moz-osx-font-smoothing: grayscale; /*fonte no mozila*/
+}
+
+:root {
+    --background-color: #09090b;
+    --surface-color: #18181b;
+    --stroke-color: #27272a;
+    --text-color-primary: #f4f4f5;
+    --text-color-secondary: #a1a1aa;
+    --brand-color-primary: #f7b733;
+    --brand-color-secondary: #fc4a1a;
+
+    --font-family-sans: "Inter", system-ui, sans-serif;
+    --font-weight-base: 400;
+    --font-weight-md: 500;
+    --font-weight-bold: 800;
+
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem; /*large*/
+    --font-size-xl: 1.5rem; /*extra large*/
+    --font-size-2xl: 2.5rem; /*extralarge duas vezes*/
+
+}
+
+html {
+    /*configurações padrões da página*/
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-base);
+    font-size: var(--font-size-base);
+    line-height: 1.6; /*porcentagem de 160% da topografia fontemobile figma paragráfo*/
+    color: var(--text-color-primary);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    line-height: 1.2; /*todos eles possuem o mesmo line height no figma*/
+    color: var(--text-color-primary);
+    font-weight: var(--font-weight-bold);
+    /*letter-spacing: 0.4em;*/
+}
+
+h1 {
+    font-size: var(--font-size-2xl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul[role="list"] {
+    display: none; /*para que o navegador volte a identificar uma ul como lista use o atributo role="list" direito na tag HTML*/
+}
+
+/*o em sempre busca a font-size pai, que é sempre o root. 80 x 16 = 1280px*/
+@media (width >= 80em) {
+    /*agora vamos alterar as coisas que eu defini antes se a largura for maior ou igual a 80em*/
+    :root {
+        --font-size-lg: 2rem; /*large do desktop h3*/
+        --font-size-xl: 3rem; /*extra large desktop h2*/
+        --font-size-2xl: 4rem; /*2 vezes extra large desktop h1*/
+    }
+
+}
