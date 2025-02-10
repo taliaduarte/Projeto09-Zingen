@@ -32,6 +32,11 @@
     --font-size-xl: 1.5rem; /*extra large*/
     --font-size-2xl: 2.5rem; /*extralarge duas vezes*/
 
+    --padding-block-base: 1rem;
+    --padding-block-lg: 1.5rem;
+    --padding-block-xl: 3rem;
+    --padding-inline-lg: 1.5rem; /*valor do padding eixo x para mobile. Pois 24/16=1.5rem*/
+    
 }
 
 html {
@@ -82,6 +87,11 @@ ul[role="list"] {
         --font-size-lg: 2rem; /*large do desktop h3*/
         --font-size-xl: 3rem; /*extra large desktop h2*/
         --font-size-2xl: 4rem; /*2 vezes extra large desktop h1*/
+
+        --padding-block-base: 1.5rem;
+        --padding-block-lg: 2.5rem;
+        --padding-block-xl: 5rem;
+        --padding-inline-lg: 2rem; /*32px de padding no desktop*/
     }
 
 }

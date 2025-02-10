@@ -1,0 +1,48 @@
+.padding-block-base {
+   padding-block: var(--padding-block-base); 
+}
+
+.padding-block-lg {
+    padding-block: var(--padding-block-lg); 
+ }
+
+ .padding-block-xl {
+    padding-block: var(--padding-block-xl); 
+ }
+
+.padding-inline-lg {
+    padding-inline: var(--padding-inline-lg);
+}
+
+/*o container vao definir aonde vai conter as coisas quando for consumir o HTML*/
+.container {
+    --max-width: 375px; /*fator máximo que é permitido de largura, pois é o tamanho width tela mobile figma*/
+    width: min(var(--max-width), 100% - var(--padding-inline-lg) * 2);
+    margin-inline: auto;
+    border: solid violet;
+}
+
+.desktop-only {
+    display: none;
+}
+
+.even-column {
+    display: grid;
+    gap: 1rem;
+}
+
+/*Em telas grandes, eu diminui para 50em, a partir de 50em já são aplicadas as mudanças*/
+@media (width >= 50em) {
+    .container {
+        --max-width: 80rem; /*aumenta o container e o novo padding-inline desktop coloquei no arquivo global*/ 
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+
+    .even-column {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
