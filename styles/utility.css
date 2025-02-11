@@ -35,8 +35,16 @@
     display: flex;
 }
 
+.items-center {
+    align-items: center; /*alinhou todos ao centro*/
+}
+
 .gap-1 {
     gap: 1rem;
+}
+
+.gap-1\.5 { /*coloca o \ para que ele funcione como literal, mas no HTML é sem a barrinha*/
+    gap: 1.5rem;
 }
 
 .grid {

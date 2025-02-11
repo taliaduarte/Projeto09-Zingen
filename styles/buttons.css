@@ -21,6 +21,9 @@
 .btn:hover {
     --btn-background-color: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%); 
     /*--btn-background-color: linear-gradient(90deg, #fc4a1a, #f7b733); pode fazer assim também*/
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: var(--background-color);
 }
 
 /*Agora as propriedades para os diferentes tamanhos de botões:*/
@@ -46,17 +49,30 @@
 .btn[aria-label]::before {
     content: "";
     position: absolute;
-    border-radius: inherit;
-    inset: 1.5px;
+    border-radius: inherit; /*herdar do pai*/
+    inset: 1.5px; /*deslocamento que deixou a "borda" que eu queria*/
     background-color: var(--background-color);
 }
 
 .btn[aria-label]::after {
-    content: attr(aria-label);
-    background: var(--btn-background-color);
-    -webkit-background-clip: text;
+    content: attr(aria-label); /*pega um atributo*/
+    background: var(--btn-background-color); /*essa cor já seria o linear gradient com hover*/
+    -webkit-background-clip: text; /*fazerem o recorte e aplicar a cor só no texto, pois estava aplicando no fundo da caixa de texto*/
     background-clip: text;
     color: transparent;
     position: relative;
     z-index: 1;
+}
+
+@media (width >= 80em) {
+    .btn-small {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--font-size-base);
+    }
+    
+    .btn-medium {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
+    
 }

@@ -13,16 +13,21 @@
     
 </head>
 <body>
-    <div class="flex gap-1">
-        <a href="#" class="btn btn-small">label</a>
-        <a href="#" class="btn btn-medium">label</a>
-        <button href="#" class="btn btn-large">label</button>
-    </div>
+    <header>
+        <div class="container padding-block-base">
+            <nav class="flex items-center gap-1.5">
+                <a href="#">
+                    <img src="assets/logo.svg" alt="Zingen logo">
+                </a>
 
-    <div class="flex gap-1">
-        <a aria-label="Label" href="#" class="btn btn-small"></a>
-        <a aria-label="Label" href="#" class="btn btn-medium"></a>
-        <button aria-label="Label" href="#" class="btn btn-large"></button>
-    </div>
+                <!--links que vão aparecer somente desktop-->
+                <a href="#about" class="desktop-only">Conheça o app</a>
+                <a href="#features" class="desktop-only">Funcionalidades</a>
+                <a href="#pricing" class="desktop-only">Planos e preços</a>
+
+                <a href="#download" class="btn btn-small">Baixar agora</a>
+            </nav>
+        </div>
+    </header>
 </body>
 </html>

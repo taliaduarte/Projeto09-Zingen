@@ -76,6 +76,13 @@ a {
     color: inherit;
 }
 
+a:hover { /*precisa ser especifica se não da problema nos outros <a> que estão como botoes*/
+    background: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /*tira a cor do texto color para que seja possível ver o recorte, deixando texto em gradient*/
+}
+
 ul[role="list"] {
     display: none; /*para que o navegador volte a identificar uma ul como lista use o atributo role="list" direito na tag HTML*/
 }
