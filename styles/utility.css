@@ -19,7 +19,6 @@
     --max-width: 375px; /*fator máximo que é permitido de largura, pois é o tamanho width tela mobile figma*/
     width: min(var(--max-width), 100% - var(--padding-inline-lg) * 2);
     margin-inline: auto;
-    border: solid violet;
 }
 
 .desktop-only {
