@@ -84,7 +84,8 @@ a:hover { /*precisa ser especifica se não da problema nos outros <a> que estão
 }
 
 ul[role="list"] {
-    display: none; /*para que o navegador volte a identificar uma ul como lista use o atributo role="list" direito na tag HTML*/
+    /*display: none; para que o navegador volte a identificar uma ul como lista use o atributo role="list" direito na tag HTML*/
+    list-style: none;
 }
 
 img {

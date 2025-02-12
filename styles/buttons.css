@@ -50,7 +50,7 @@
     content: "";
     position: absolute;
     border-radius: inherit; /*herdar do pai*/
-    inset: 1.5px; /*deslocamento que deixou a "borda" que eu queria*/
+    inset: 1px; /*deslocamento que deixou a "borda" que eu queria*/
     background-color: var(--background-color);
 }
 
