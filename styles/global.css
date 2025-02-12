@@ -87,6 +87,11 @@ ul[role="list"] {
     display: none; /*para que o navegador volte a identificar uma ul como lista use o atributo role="list" direito na tag HTML*/
 }
 
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
 /*o em sempre busca a font-size pai, que é sempre o root. 80 x 16 = 1280px*/
 @media (width >= 80em) {
     /*agora vamos alterar as coisas que eu defini antes se a largura for maior ou igual a 80em*/
