@@ -46,6 +46,7 @@ html {
     font-size: var(--font-size-base);
     line-height: 1.6; /*porcentagem de 160% da topografia fontemobile figma paragráfo*/
     color: var(--text-color-primary);
+    overflow-x: hidden;
 }
 
 body {
